@@ -26,8 +26,7 @@ Argumentos recebidos (opcionais): $ARGUMENTS
    - **Padrões das Referências:** o que o nicho repete (cores, linguagem visual, clichês).
    - **Oportunidade de Diferenciação:** 3 territórios visuais onde a marca pode se destacar.
    - Tabela com links para os screenshots.
-4. Atualize o `README.md` (status: Diagnóstico ✅) e rode:
-   `git add . && git commit -m "docs(brand): add visual analysis of brand and niche references" && git push origin main`
+4. Crie/atualize o painel local `brand/painel.md` (status: Diagnóstico ✅). Nada de commit ou push: os dados da marca ficam só na pasta local.
 
 ---
 
@@ -59,8 +58,7 @@ Peça para o usuário responder no formato `1A, 2B, 3C, 4A, 5B`; combinações e
    - **Master Style Prompt** (bloco fixo em inglês, pronto para colar no fim de qualquer prompt).
    - **Negative Prompt Padrão** (em inglês).
    - **Variações do Master Style** por modelo: Nano Banana Pro (cenas e texto renderizado) e Recraft V3 SVG (vetor).
-3. Atualize o `README.md` (Questionário ✅, Brand DNA ✅) e rode:
-   `git add . && git commit -m "feat(dna): lock brand visual identity and master style prompt" && git push origin main`
+3. Atualize `brand/painel.md` (Questionário ✅, Brand DNA ✅, DNA em uma linha). Nada de commit ou push.
 4. Mostre um resumo visual do DNA e o menu:
    - `/post`: posts para feed e stories
    - `/logo`: conceitos de logo e prompts vetoriais

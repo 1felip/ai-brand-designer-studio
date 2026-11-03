@@ -36,6 +36,5 @@ Siga o roteamento de modelos do `CLAUDE.md`. Com `GEMINI_API_KEY` configurada:
 2. Gere a opção aprovada no **final** com `-Modelo pro -Tamanho 2K` em `assets/posts/post-XXX-<slug>-v1.png`. Passe em `-Referencias` o logo/pin e qualquer template aprovado.
 Sem chave ou sem crédito, avise que só os prompts foram entregues.
 
-## 5. Sincronizar
-Atualize o índice "Posts" no `README.md` e rode:
-`git add . && git commit -m "feat(post): generate art direction and prompts for <tema>" && git push origin main`
+## 5. Registrar no painel local
+Atualize o índice "Posts" em `brand/painel.md`. Os arquivos ficam só na pasta local: **não** faça commit nem push (ver `CLAUDE.md` §3).

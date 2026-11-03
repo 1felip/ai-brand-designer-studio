@@ -1,5 +1,7 @@
 # Arquitetura e Prompt Mestre para Claude Code: Agente de IA Designer (MCPs + Skills + GitHub Sync)
 
+> **Atualização (03/11/2026):** o fluxo de commit e push automático descrito abaixo foi **desativado**. Os dados da marca (`brand/`, `prompts/`, `assets/`) agora ficam só na pasta local do usuário e estão no `.gitignore`; o status e o índice de criações ficam em `brand/painel.md`. O GitHub serve apenas para distribuir o agente publicamente. A regra vigente está no [`CLAUDE.md` §3](../CLAUDE.md).
+
 Este documento foi adaptado especificamente para o **Claude Code**. No Claude Code, os comandos `/post`, `/logo`, `/capa`, `/carrossel` e `/dna` funcionam como **Slash Commands nativos** (arquivos Markdown dentro de `.claude/commands/`), enquanto o arquivo `CLAUDE.md` mantém a memória viva da marca e força o **commit e push automático no GitHub** a cada etapa concluída.
 
 ## 1. Melhores MCPs (Model Context Protocol) para o Claude Code Designer

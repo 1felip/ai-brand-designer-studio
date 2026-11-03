@@ -31,6 +31,5 @@ Siga o roteamento de modelos do `CLAUDE.md`. Com `GEMINI_API_KEY` configurada:
 2. Gere os demais slides passando o slide 1 aprovado em `-Referencias` ("same visual system as the reference image, slide N of T"). Salve em `assets/posts/carrossel-XXX-<slug>-s<NN>.png`.
 Sem chave ou sem crédito, avise que só os prompts foram entregues.
 
-## 5. Sincronizar
-Atualize o índice "Carrosséis" no `README.md` e rode:
-`git add . && git commit -m "feat(carrossel): generate visual script for <tema>" && git push origin main`
+## 5. Registrar no painel local
+Atualize o índice "Carrosséis" em `brand/painel.md`. Os arquivos ficam só na pasta local: **não** faça commit nem push (ver `CLAUDE.md` §3).

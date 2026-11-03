@@ -13,5 +13,4 @@ Siga o `CLAUDE.md`. Ajuste solicitado (opcional): $ARGUMENTS
    A: Paleta · B: Tipografia · C: Mood/linguagem visual · D: Iluminação · E: Master/Negative Prompt
    Para o item escolhido, ofereça **3 alternativas (A/B/C)** coerentes com o restante do DNA. **Pare e espere.**
 4. Aplique a mudança em `brand/brand-dna.md`, mantendo o documento coerente: se a paleta mudar, atualize também o Master Style Prompt. Registre a alteração numa seção **"Histórico de alterações"** no fim do arquivo (data, o que mudou e por quê).
-5. Atualize o `README.md`, se necessário, e rode:
-   `git add . && git commit -m "feat(dna): update <diretriz> guidelines" && git push origin main`
+5. Atualize `brand/painel.md` (linha "DNA em uma linha"), se necessário. O DNA fica só na pasta local: **não** faça commit nem push.

@@ -9,22 +9,21 @@ Fale com o usuário em **português do Brasil**. Escreva os prompts técnicos de
 - Se `brand/brand-dna.md` ainda não existir, avise o usuário e sugira rodar `/onboarding` primeiro.
 - Nunca invente cores ou fontes fora do DNA. Se uma peça pedir algo novo, proponha a mudança via `/dna`.
 
-## 3. Regra obrigatória de sincronização com o GitHub (auto-commit e push)
-Repositório: https://github.com/1felip/ai-brand-designer-studio (**público**, branch `main`).
+## 3. Dados da marca ficam só na pasta local
+O repositório https://github.com/1felip/ai-brand-designer-studio (**público**, branch `main`) existe apenas para **distribuir o agente** a outros usuários: `CLAUDE.md`, `.claude/commands/`, `scripts/`, `docs/` e o `README.md` genérico.
+
+Tudo o que é da marca do usuário é **local e nunca vai para o Git** (as pastas já estão no `.gitignore`):
+- `brand/`: diagnóstico, questionário, `brand-dna.md` (paleta, tipografia, master style), preferências e o **painel da marca** `brand/painel.md`.
+- `prompts/<tipo>/` e `assets/<tipo>/` (inclusive `assets/referencias/`).
 
 Ao concluir cada etapa (diagnóstico, questionário, DNA, cada `/post`, `/logo`, `/capa`, `/carrossel` ou ajuste de `/dna`):
 1. Salve os arquivos gerados nas pastas corretas (`brand/`, `prompts/<tipo>/`, `assets/<tipo>/`).
-2. Atualize o `README.md`: a tabela "Status da marca" e o "Índice de criações", com links relativos para cada arquivo novo.
-3. Execute:
-   ```bash
-   git add . && git commit -m "<tipo>(<escopo>): <descrição clara da etapa>" && git push origin main
-   ```
-   Use commits semânticos (`feat`, `docs`, `chore`, `fix`), por exemplo:
-   - `docs(brand): add visual analysis of brand and niche references`
-   - `feat(dna): lock brand visual identity and master style prompt`
-   - `feat(post): generate art direction and prompts for <tema>`
+2. Atualize `brand/painel.md`: a tabela "Status da marca" e o "Índice de criações", com links relativos para cada arquivo novo (crie o painel se não existir).
+3. **Não** rode `git add`, `commit` nem `push` para conteúdo da marca. Nunca use `git add -f` em `brand/`, `prompts/` ou `assets/`.
 
-**Segurança (repo público):** nunca grave chaves de API, tokens ou dados pessoais sensíveis em arquivos versionados. As chaves ficam só em variáveis de ambiente (`GEMINI_API_KEY`, `REPLICATE_API_TOKEN`, `FIRECRAWL_API_KEY`, `GITHUB_PERSONAL_ACCESS_TOKEN`).
+Commits e push só acontecem quando o usuário **pedir explicitamente** uma mudança no próprio agente (comandos, scripts, `CLAUDE.md`, docs, `README.md` genérico). Use commits semânticos (`feat`, `docs`, `chore`, `fix`) e confira com `git status` que nenhum arquivo da marca entrou no commit.
+
+**Segurança (repo público):** nunca grave chaves de API, tokens ou dados pessoais em arquivos versionados, nem nomes, links ou exemplos da marca do usuário no `README.md` ou nos comandos. As chaves ficam só em variáveis de ambiente (`GEMINI_API_KEY`, `REPLICATE_API_TOKEN`, `FIRECRAWL_API_KEY`, `GITHUB_PERSONAL_ACCESS_TOKEN`).
 
 ## 4. Economia de esforço nos questionários
 - Nunca faça perguntas abertas sem direção.

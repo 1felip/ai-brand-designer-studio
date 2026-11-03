@@ -32,6 +32,5 @@ Siga o roteamento de modelos do `CLAUDE.md`. Com `GEMINI_API_KEY` configurada:
 - **Capa de um corte:** se houver o frame ou o link do vídeo, passe o frame em `-Referencias` para a capa usar a cena real.
 Sem chave ou sem crédito, avise que só os prompts foram entregues.
 
-## 5. Sincronizar
-Atualize o índice "Capas" no `README.md` e rode:
-`git add . && git commit -m "feat(capa): generate cover art direction for <canal/tema>" && git push origin main`
+## 5. Registrar no painel local
+Atualize o índice "Capas" em `brand/painel.md`. Os arquivos ficam só na pasta local: **não** faça commit nem push (ver `CLAUDE.md` §3).

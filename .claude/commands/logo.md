@@ -35,6 +35,5 @@ Siga o roteamento de modelos do `CLAUDE.md`:
 - **Lockup com nome / mockup (opcional):** `scripts/gerar-imagem.ps1 -Modelo pro -Proporcao 1:1` → `assets/logos/logo-XXX-<slug>-c<N>-lockup.png`.
 Sem a chave do modelo ou sem crédito, avise que só os prompts foram entregues.
 
-## 5. Sincronizar
-Atualize o índice "Logos" no `README.md` e rode:
-`git add . && git commit -m "feat(logo): generate identity concepts and vector prompts for <nome>" && git push origin main`
+## 5. Registrar no painel local
+Atualize o índice "Logos" em `brand/painel.md`. Os arquivos ficam só na pasta local: **não** faça commit nem push (ver `CLAUDE.md` §3).

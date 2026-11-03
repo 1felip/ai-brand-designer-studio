@@ -24,3 +24,12 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+
+# Dados da marca do usuário: ficam SÓ na pasta local (nunca no GitHub)
+# Apenas os .gitkeep são versionados, para manter a estrutura de pastas.
+brand/*
+!brand/.gitkeep
+prompts/*/*
+!prompts/*/.gitkeep
+assets/*/*
+!assets/*/.gitkeep
