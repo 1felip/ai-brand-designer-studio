@@ -1,0 +1,14 @@
+# Segredos e chaves de API — NUNCA versionar (repositório público)
+.env
+.env.*
+*.key
+
+# Configurações locais do Claude Code
+.claude/settings.local.json
+
+# Dependências e temporários
+node_modules/
+.playwright-mcp/
+*.log
+.DS_Store
+Thumbs.db
