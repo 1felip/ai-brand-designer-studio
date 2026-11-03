@@ -22,8 +22,10 @@ Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e 
 | Etapa | Status | Arquivo |
 | :--- | :--- | :--- |
 | Diagnóstico de referências | ✅ Concluído | [brand/diagnostico-referencias.md](brand/diagnostico-referencias.md) |
-| Questionário de decisões | ⏳ Pendente | `brand/questionario-decisoes.md` |
-| Brand DNA | ⏳ Pendente | `brand/brand-dna.md` |
+| Questionário de decisões | ✅ `1A, 2B, 3A, 4C, 5C` | [brand/questionario-decisoes.md](brand/questionario-decisoes.md) |
+| Brand DNA | ✅ Travado | [brand/brand-dna.md](brand/brand-dna.md) |
+
+**DNA em uma linha:** Neon Arcade Noturno · `#0A1628` / `#5EE6A8` / `#FFD23F` · Anton + Rubik + Press Start 2P · frame em tela cheia com moldura menta
 
 ## Índice de criações
 

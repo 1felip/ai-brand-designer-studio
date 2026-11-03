@@ -48,4 +48,15 @@ Neutros comuns às três: texto claro `#F2F7F5` · texto escuro `#0A0F14`.
 ---
 
 ## Decisões finais
-_A preencher após a resposta._
+
+> Respondido em 2026-11-03: **`1A, 2B, 3A, 4C, 5C`**
+
+| # | Decisão | Escolha |
+| :--- | :--- | :--- |
+| 1 | Mood | **A: Save Point Noturno** (imersivo · preciso · tech) |
+| 2 | Paleta | **B: Menta + Moeda** (`#0A1628` 60% · `#5EE6A8` 30% · `#FFD23F` 10%) |
+| 3 | Linguagem visual | **A: Frame em tela cheia** (o conteúdo é o herói, a marca fica na moldura) |
+| 4 | Iluminação | **C: Pop studio / vibrante** |
+| 5 | Tipografia | **C: Display bold** (Anton + Rubik + Press Start 2P nos selos) |
+
+**Nota de conciliação (1A × 4C):** o mood noturno define a *base* (fundos azul-noite, HUD, pin). A iluminação pop define o *tratamento*: frames com cor saturada, contraste alto, brilhos menta e amarelo vibrantes. O resultado é **"Neon Arcade Noturno"**: escuro na estrutura, vibrante no conteúdo.
