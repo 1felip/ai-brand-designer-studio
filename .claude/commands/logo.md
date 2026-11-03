@@ -1,5 +1,5 @@
 ---
-description: Gera 3 conceitos de logo e prompts vetoriais (Recraft V3 / Ideogram)
+description: Gera 3 conceitos de logo e prompts vetoriais (Recraft V3 SVG / Nano Banana Pro)
 argument-hint: [nome da marca opcional]
 ---
 
@@ -23,12 +23,15 @@ Crie `prompts/logos/logo-XXX-<slug>.md` com:
 - **3 conceitos de identidade:** nome do conceito, racional estratégico, descrição da forma, cores do DNA aplicadas e tipografia.
 - Para cada conceito, prompts em inglês:
   - **Recraft V3 (SVG vetorial):** `flat vector logo, minimalist, clean lines, scalable, solid background, no realistic shading, ...` + paleta HEX + estilo `vector_illustration` / `icon`.
-  - **Ideogram:** com o nome da marca entre aspas para renderizar o texto com precisão.
+  - **Nano Banana Pro (lockup com nome):** com o nome da marca entre aspas para renderizar o texto com precisão.
 - **Negative prompt:** `photorealistic, 3D render, gradients, drop shadow, texture, mockup, busy background, multiple logos, watermark, blurry`, mais o negative do DNA.
 - **Checklist de validação:** legível em 16px, funciona em uma cor só, positivo/negativo, área de proteção.
 
 ## 4. Gerar o asset (opcional)
-Se o Replicate MCP estiver ativo, gere com Recraft V3 e salve em `assets/logos/logo-XXX-<slug>-c<N>.svg` (ou `.png`).
+Siga o roteamento de modelos do `CLAUDE.md`:
+- **Símbolo em vetor (principal):** `scripts/gerar-vetor.ps1` (Recraft V3 SVG) → `assets/logos/logo-XXX-<slug>-c<N>.svg`.
+- **Lockup com nome / mockup (opcional):** `scripts/gerar-imagem.ps1 -Modelo pro -Proporcao 1:1` → `assets/logos/logo-XXX-<slug>-c<N>-lockup.png`.
+Sem a chave do modelo ou sem crédito, avise que só os prompts foram entregues.
 
 ## 5. Sincronizar
 Atualize o índice "Logos" no `README.md` e rode:

@@ -12,10 +12,20 @@ Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e 
 | :--- | :--- |
 | `/onboarding` | Analisa a marca e as referências, aplica o questionário A/B/C e gera o DNA da marca |
 | `/post` | Direção de arte + 3 prompts técnicos para posts |
-| `/logo` | Conceitos de identidade + prompts vetoriais (Recraft V3 / Ideogram) |
+| `/logo` | Conceitos de identidade + prompts vetoriais (Recraft V3 SVG / Nano Banana Pro) |
 | `/capa` · `/cape` | Capas e banners com mapa de safe zones |
 | `/carrossel` | Roteiro visual slide a slide |
 | `/dna` | Visualiza e ajusta as diretrizes da marca |
+
+## Geração de imagens (melhor qualidade por peça)
+
+| Peça | Modelo | Script | Chave |
+| :--- | :--- | :--- | :--- |
+| Posts, capas, carrosséis, lockups (final) | Nano Banana Pro `gemini-3-pro-image` | [scripts/gerar-imagem.ps1](scripts/gerar-imagem.ps1) `-Modelo pro` | `GEMINI_API_KEY` |
+| Rascunhos, banners `4:1`, capa a partir de vídeo | Nano Banana 2.1 `gemini-nano-banana-2.1` | [scripts/gerar-imagem.ps1](scripts/gerar-imagem.ps1) `-Modelo flash` | `GEMINI_API_KEY` |
+| Logo, ícones, selos (SVG) | Recraft V3 SVG (Replicate) | [scripts/gerar-vetor.ps1](scripts/gerar-vetor.ps1) | `REPLICATE_API_TOKEN` |
+
+Tabela completa de roteamento: [CLAUDE.md](CLAUDE.md#roteamento-de-modelos-melhor-qualidade-por-peça). As chaves ficam só em variáveis de ambiente, nunca no repositório.
 
 ## Status da marca
 
@@ -36,7 +46,7 @@ _Nenhum ainda._
 ### Logos
 | # | Criação | Conceitos | Assets |
 | :--- | :--- | :--- | :--- |
-| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | ⏳ Pendente (Replicate sem crédito) |
+| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | ⏳ Pendente (sem crédito no Replicate / sem chave do Gemini) |
 
 ### Capas
 _Nenhuma ainda._

@@ -11,7 +11,10 @@ Antes ou durante a inicialização, o Claude Code utilizará os seguintes servid
 | **Análise Visual & CSS de Páginas** | **Playwright MCP** (`@playwright/mcp`) | `claude mcp add playwright npx @playwright/mcp@latest` | Abre o site/página da marca e concorrentes, tira *screenshots* reais para análise visual (Claude Vision) e extrai cores `#HEX` e fontes do CSS |
 | **Scraping de Conteúdo e Copy** | **Firecrawl MCP** (`firecrawl-mcp`) | `claude mcp add firecrawl -e FIRECRAWL_API_KEY=sua_key -- npx -y firecrawl-mcp` | Extrai posicionamento, textos, estrutura de landing pages e URLs de imagens de referência |
 | **Versionamento & Repositório** | **GitHub MCP** + **GitHub CLI (`gh`)** | `claude mcp add github -- npx -y @modelcontextprotocol/server-github` | Cria o repositório remoto, gerencia branches/commits e sincroniza todo o progresso automaticamente |
-| **Geração de Logos, Vetores e Posts** | **Replicate MCP** ou **Fal.ai MCP** | `claude mcp add replicate -e REPLICATE_API_TOKEN=sua_key -- npx -y replicate-mcp` | Executa **Recraft V3** (logos em `.SVG` vetorial), **Ideogram v2/v3** (tipografia precisa) e **Flux.1 Pro** (posts fotorrealistas) salvando na pasta do projeto |
+| **Geração raster (posts, capas, carrosséis)** | **Nano Banana** via Gemini API (script `scripts/gerar-imagem.ps1`) | Variável `GEMINI_API_KEY` | **Nano Banana Pro** (`gemini-3-pro-image`) para finais com texto e fotorrealismo; **Nano Banana 2.1** para rascunhos, proporções extremas e video-to-image |
+| **Geração vetorial (logos, ícones)** | **Replicate** (script `scripts/gerar-vetor.ps1` + Replicate MCP) | `claude mcp add replicate -e REPLICATE_API_TOKEN=sua_key -- npx -y replicate-mcp` | Executa **Recraft V3 SVG** (logos em `.SVG` vetorial) |
+
+> **Atualização 2026-11-03:** a integração passou a ser híbrida (Nano Banana + Recraft SVG), escolhendo a melhor qualidade por peça. Flux.1 Pro e Ideogram saíram do fluxo. A tabela de roteamento oficial fica no `CLAUDE.md`. O prompt de inicialização abaixo é mantido como registro histórico.
 | **Integração com Design System** | **Figma MCP** (`figma-developer-mcp`) | `claude mcp add figma -e FIGMA_API_KEY=sua_key -- npx -y figma-developer-mcp` | Lê tokens, grids e frames do Figma (opcional, caso a marca já possua layouts no Figma) |
 
 ## 2. Prompt de Inicialização (Cole este bloco no Claude Code para criar tudo sozinho)

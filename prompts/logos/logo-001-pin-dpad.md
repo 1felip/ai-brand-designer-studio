@@ -33,7 +33,7 @@
 flat vector logo icon, minimalist, clean lines, scalable, solid background, no realistic shading, a single bold map location pin silhouette in mint green (#5EE6A8), inside the round head of the pin a game controller d-pad cross shape cut out as negative space showing the background, a tiny coin-yellow (#FFD23F) square dot in the exact center of the d-pad, slightly rounded corners, perfectly symmetrical, centered composition with generous padding, solid deep night-navy (#0A1628) background, geometric precision, reads clearly at 16px, Checkpoint Pop brand style, flat vector illustration, solid colors only from palette #0A1628 #5EE6A8 #FFD23F #F2F7F5, no gradients
 ```
 
-### Ideogram (lockup com nome) · aspect 1:1
+### Nano Banana Pro (lockup com nome) · `-Modelo pro -Proporcao 1:1`
 ```text
 minimalist flat vector logo, a bold mint green (#5EE6A8) map location pin icon with a game d-pad cross cut out inside its round head and a tiny coin-yellow (#FFD23F) dot in the center, centered above the text "CHECKPOINT POP" in a bold condensed uppercase Anton-style font in off-white (#F2F7F5), solid deep navy (#0A1628) background, clean layout, generous negative space, perfectly legible typography, no spelling errors, flat colors, no gradients
 ```
@@ -53,7 +53,7 @@ minimalist flat vector logo, a bold mint green (#5EE6A8) map location pin icon w
 flat vector logo icon, minimalist, clean lines, scalable, solid background, no realistic shading, a bold game controller d-pad cross shape in mint green (#5EE6A8) whose bottom arm extends and tapers into a sharp point like the needle of a map location pin, merging d-pad and map pin into one single geometric symbol, a small coin-yellow (#FFD23F) circle in the center of the cross, slightly rounded outer corners, perfectly symmetrical, centered with generous padding, solid deep night-navy (#0A1628) background, Checkpoint Pop brand style, flat vector illustration, solid colors only from palette #0A1628 #5EE6A8 #FFD23F #F2F7F5, no gradients, reads clearly at 16px
 ```
 
-### Ideogram (lockup com nome) · aspect 1:1
+### Nano Banana Pro (lockup com nome) · `-Modelo pro -Proporcao 1:1`
 ```text
 minimalist flat vector logo, a geometric mint green (#5EE6A8) game d-pad cross whose bottom arm tapers into the point of a map pin, small coin-yellow (#FFD23F) dot in the center, placed to the left of the text "CHECKPOINT POP" in a bold condensed uppercase Anton-style font in off-white (#F2F7F5), horizontal lockup, solid deep navy (#0A1628) background, clean layout, perfectly legible typography, no spelling errors, flat colors, no gradients
 ```
@@ -73,7 +73,7 @@ minimalist flat vector logo, a geometric mint green (#5EE6A8) game d-pad cross w
 flat vector logo icon, minimalist, clean lines, scalable, solid background, no realistic shading, an 8-bit pixel art map location pin built from large square pixels on a coarse grid, mint green (#5EE6A8), with a game d-pad cross cut out of pixels inside the round head of the pin showing the background, a single coin-yellow (#FFD23F) pixel block in the center of the d-pad, crisp hard pixel edges, no anti-aliasing, retro arcade save point sprite, perfectly symmetrical, centered with generous padding, solid deep night-navy (#0A1628) background, Checkpoint Pop brand style, solid colors only from palette #0A1628 #5EE6A8 #FFD23F #F2F7F5, no gradients
 ```
 
-### Ideogram (lockup com nome) · aspect 1:1
+### Nano Banana Pro (lockup com nome) · `-Modelo pro -Proporcao 1:1`
 ```text
 retro 8-bit pixel art logo, a mint green (#5EE6A8) pixel map pin with a pixel d-pad cut out in its head and one coin-yellow (#FFD23F) center pixel, above the text "CHECKPOINT POP" in a bold condensed uppercase Anton-style font in off-white (#F2F7F5), small retro pixel font badge "CHECKPOINT #001" in a mint pill below, solid deep navy (#0A1628) background, clean layout, perfectly legible typography, no spelling errors, flat colors, no gradients
 ```
@@ -125,4 +125,4 @@ photorealistic, 3D render, gradients, drop shadow, texture, mockup, busy backgro
 | C2 Cruz-Pin | `assets/logos/logo-001-pin-dpad-c2.svg` | ⏳ Pendente |
 | C3 Pixel Pin | `assets/logos/logo-001-pin-dpad-c3.svg` | ⏳ Pendente |
 
-> 2026-11-03: a geração no Replicate (`recraft-ai/recraft-v3-svg`) retornou **402 Payment Required**, ou seja, a conta está sem crédito. Os prompts acima estão prontos para rodar assim que houver saldo, ou para colar direto no Recraft/Ideogram.
+> 2026-11-03: a primeira tentativa no Replicate (`recraft-ai/recraft-v3-svg`) retornou **402 Payment Required**, ou seja, a conta está sem crédito. Rodar com `scripts/gerar-vetor.ps1` (SVG) assim que houver saldo no Replicate, e `scripts/gerar-imagem.ps1 -Modelo pro` (lockups) quando a `GEMINI_API_KEY` estiver configurada.

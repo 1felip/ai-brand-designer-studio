@@ -14,7 +14,7 @@ Leia `brand/brand-dna.md`. Se não existir, pare e sugira `/onboarding`.
 1. **Objetivo principal:** A: Atrair atenção · B: Educar/autoridade · C: Vender/oferta · D: Engajamento
 2. **Público e tema/dor central:** sugira **2 temas prontos** específicos do nicho (A, B) + C: "tema meu: ___"
 3. **Formato/proporção:** A: `4:5` feed retrato · B: `1:1` quadrado · C: `9:16` stories/reels
-4. **Texto na arte:** A: imagem limpa com *negative space* para texto aplicado depois · B: texto curto já renderizado na imagem (indique a frase entre aspas; use Ideogram)
+4. **Texto na arte:** A: imagem limpa com *negative space* para texto aplicado depois · B: texto curto já renderizado na imagem (indique a frase entre aspas; use Nano Banana Pro)
 
 Peça a resposta no formato `1B, 2A, 3A, 4B`. **Pare e espere.**
 
@@ -31,7 +31,10 @@ Descubra o próximo número em `prompts/posts/` e crie `prompts/posts/post-XXX-<
   Inclua `--ar` / aspect ratio e o **Negative Prompt Padrão** do DNA.
 
 ## 4. Gerar a imagem (opcional)
-Se o Replicate MCP estiver ativo e com token, gere a variação escolhida pelo usuário (ou a 1, por padrão) e salve em `assets/posts/post-XXX-<slug>-v1.png`. Se não estiver, avise que só os prompts foram entregues.
+Siga o roteamento de modelos do `CLAUDE.md`. Com `GEMINI_API_KEY` configurada:
+1. Gere **rascunhos** das 3 opções com `scripts/gerar-imagem.ps1 -Modelo flash -Tamanho 1K`, salvando em `assets/posts/post-XXX-<slug>-rascunho-o<N>.png`, e mostre ao usuário.
+2. Gere a opção aprovada no **final** com `-Modelo pro -Tamanho 2K` em `assets/posts/post-XXX-<slug>-v1.png`. Passe em `-Referencias` o logo/pin e qualquer template aprovado.
+Sem chave ou sem crédito, avise que só os prompts foram entregues.
 
 ## 5. Sincronizar
 Atualize o índice "Posts" no `README.md` e rode:

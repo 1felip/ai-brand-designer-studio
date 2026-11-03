@@ -24,7 +24,7 @@ Ao concluir cada etapa (diagnóstico, questionário, DNA, cada `/post`, `/logo`,
    - `feat(dna): lock brand visual identity and master style prompt`
    - `feat(post): generate art direction and prompts for <tema>`
 
-**Segurança (repo público):** nunca grave chaves de API, tokens ou dados pessoais sensíveis em arquivos versionados. As chaves ficam só em variáveis de ambiente (`FIRECRAWL_API_KEY`, `REPLICATE_API_TOKEN`, `GITHUB_PERSONAL_ACCESS_TOKEN`).
+**Segurança (repo público):** nunca grave chaves de API, tokens ou dados pessoais sensíveis em arquivos versionados. As chaves ficam só em variáveis de ambiente (`GEMINI_API_KEY`, `REPLICATE_API_TOKEN`, `FIRECRAWL_API_KEY`, `GITHUB_PERSONAL_ACCESS_TOKEN`).
 
 ## 4. Economia de esforço nos questionários
 - Nunca faça perguntas abertas sem direção.
@@ -35,8 +35,25 @@ Ao concluir cada etapa (diagnóstico, questionário, DNA, cada `/post`, `/logo`,
 ```
 [Subject & Action] + [Environment & Negative Space] + [Brand DNA Master Style] + [Color Palette #HEX] + [Lighting & Lens] + [Typography] + [Technical Params]
 ```
-- Sempre anexe o **Negative Prompt Padrão** do DNA.
-- Indique o modelo-alvo de cada prompt: **Flux.1 Pro** (fotorrealismo), **Ideogram** (texto renderizado), **Recraft V3** (vetor/SVG).
+- Sempre anexe o **Negative Prompt Padrão** do DNA. O Nano Banana não tem campo de negative: o script anexa o texto como `Avoid: ...`. Por isso, prefira também descrever em positivo o que se quer (ex.: "solid flat colors" em vez de só "no gradients").
+- Indique o modelo-alvo de cada prompt seguindo a tabela de roteamento abaixo.
+
+### Roteamento de modelos (melhor qualidade por peça)
+
+| Peça | Modelo final | Rascunho / iteração | Por quê |
+| :--- | :--- | :--- | :--- |
+| Post com texto na arte (`/post` 4B), capa, thumbnail, banner | **Nano Banana Pro** `gemini-3-pro-image` · 2K | Nano Banana 2.1 `gemini-nano-banana-2.1` · 1K | Melhor tipografia renderizada do mercado e fidelidade a referências |
+| Post/cena sem texto, fotorrealismo, personagens | **Nano Banana Pro** · 2K | Nano Banana 2.1 · 1K | Realismo e controle de luz/paleta por linguagem natural |
+| Carrossel (série de slides) | **Nano Banana Pro** · 2K, **com o slide 1 aprovado como referência** dos demais | Nano Banana 2.1 | Consistência entre slides via imagem de referência (até 14) |
+| Capa a partir de um corte (vídeo do YouTube) | **Nano Banana 2.1** (video-to-image) | — | Único que lê o vídeo como referência |
+| Proporções extremas (`4:1`, `1:4`, `8:1`) | **Nano Banana 2.1** | — | O Pro não suporta essas proporções |
+| **Logo final, ícones, pin, selos (vetor)** | **Recraft V3 SVG** `recraft-ai/recraft-v3-svg` (Replicate) | Nano Banana 2.1 para explorar a forma em PNG | Único que entrega SVG de verdade |
+| Lockup do logo com nome, mockups de aplicação | **Nano Banana Pro** | — | Texto da marca renderizado com precisão |
+
+Regras de uso:
+- **Rascunho primeiro, final depois:** itere no 2.1 (≈ US$ 0,034) e só gere no Pro (≈ US$ 0,134) a variação aprovada pelo usuário.
+- **Referências sempre que existirem:** passe o template aprovado, o logo e o frame do corte em `-Referencias` para manter a identidade.
+- O Nano Banana grava marca d'água invisível SynthID em todas as imagens (não afeta o visual).
 
 ## 6. Numeração e nomes de arquivos
 - Padrão: `<tipo>-XXX-<slug>.md`, com `XXX` sequencial de 3 dígitos (ex.: `post-001-lancamento-curso.md`).
@@ -47,5 +64,8 @@ Ao concluir cada etapa (diagnóstico, questionário, DNA, cada `/post`, `/logo`,
 ## 7. Ferramentas
 - **Playwright MCP:** navegar nas páginas, tirar screenshots de página inteira em `assets/referencias/` e extrair cores e fontes computadas do DOM/CSS (via `browser_evaluate`).
 - **Firecrawl MCP:** extrair copy, posicionamento e estrutura das páginas.
-- **Replicate MCP:** gerar imagens quando `REPLICATE_API_TOKEN` estiver configurado. Se não estiver, entregue só os prompts e avise.
+- **Nano Banana (Gemini API):** `scripts/gerar-imagem.ps1` gera PNG com `-Modelo pro|flash|lite`, `-Proporcao`, `-Tamanho 1K|2K|4K`, `-Referencias` e `-Negative`. Requer `GEMINI_API_KEY`.
+- **Recraft V3 SVG (Replicate):** `scripts/gerar-vetor.ps1` gera SVG. Requer `REPLICATE_API_TOKEN`. Os scripts leem a variável do usuário direto, então funcionam mesmo se o MCP não tiver herdado o token.
+- **Replicate MCP:** alternativa para consultar modelos e predições.
+- Se a chave do modelo necessário não estiver configurada, ou a conta estiver sem crédito (erro 402), entregue só os prompts e avise o usuário. Nunca peça para colar a chave no chat.
 - **GitHub CLI (`gh`):** autenticado na conta `1felip`.

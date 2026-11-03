@@ -132,17 +132,20 @@ Checkpoint Pop brand style: "neon arcade at night" aesthetic, bold pop-culture g
 
 ### Variações por modelo
 
-**Flux.1 Pro (fotorrealismo, cenas, personagens):**
+> O Nano Banana entende linguagem natural melhor que listas de tags: escreva a cena em frases e cole o Master Style no final.
+
+**Nano Banana Pro: cenas, personagens, fotorrealismo (sem texto):**
 ```text
-... , cinematic yet vibrant pop studio lighting, mint-green (#5EE6A8) rim light, saturated color grading, deep navy (#0A1628) shadows, sharp focus, high dynamic range, 35mm lens, shallow depth of field, ultra-detailed, no text
+... , cinematic yet vibrant pop studio lighting, mint-green (#5EE6A8) rim light, saturated color grading, deep navy (#0A1628) shadows, sharp focus, high dynamic range, shot on a 35mm lens with shallow depth of field, ultra-detailed. The image contains no text, letters or logos.
 ```
 
-**Ideogram (texto renderizado na arte):**
+**Nano Banana Pro: texto renderizado na arte (posts, capas, carrosséis):**
 ```text
-... , bold condensed uppercase headline in Anton-style font, white (#F2F7F5) text with ONE key word in coin yellow (#FFD23F), small mint-green (#5EE6A8) pill badge with retro pixel font, perfectly legible typography, clean layout, no spelling errors
+... , the headline "<TEXTO EXATO>" set in a bold condensed uppercase sans-serif in the style of Anton, off-white (#F2F7F5), with only the word "<PALAVRA-GANCHO>" in coin yellow (#FFD23F); a small mint-green (#5EE6A8) pill badge reading "<GAME|FILME|SÉRIE>" in a retro 8-bit pixel font with navy (#0A1628) text. Render every letter exactly as written, perfectly legible, no extra text anywhere else.
 ```
+> Dica: com o logo/pin aprovado, passe o arquivo como imagem de referência e escreva "place the provided pin icon in the bottom-left corner as a watermark".
 
-**Recraft V3 (vetor, ícones, elementos de marca):**
+**Recraft V3 SVG (vetor: logo, ícones, pin, selos):**
 ```text
 ... , flat vector illustration, minimalist geometric shapes, clean lines, solid colors only from palette #0A1628 #5EE6A8 #FFD23F #F2F7F5, map pin with game d-pad motif, no gradients, no realistic shading, scalable
 ```
@@ -161,3 +164,4 @@ red color scheme, purple and pink RGB gamer aesthetic, rainbow gradients, glitch
 | Data | Alteração | Motivo |
 | :--- | :--- | :--- |
 | 2026-11-03 | Criação do DNA (`1A, 2B, 3A, 4C, 5C`) | Onboarding inicial |
+| 2026-11-03 | Variações por modelo: Flux.1 Pro + Ideogram → **Nano Banana Pro**; Recraft V3 SVG mantido para vetor | Integração híbrida focada na melhor qualidade por peça (paleta, fontes e estilo não mudaram) |

@@ -58,7 +58,7 @@ Peça para o usuário responder no formato `1A, 2B, 3C, 4A, 5B`; combinações e
    - **Manual de Direção de Arte:** mood, paleta 60/30/10 com HEX e uso de cada cor, tipografia (títulos, corpo, pesos e tamanhos relativos), linguagem visual, iluminação, regras de composição, o que fazer e o que não fazer.
    - **Master Style Prompt** (bloco fixo em inglês, pronto para colar no fim de qualquer prompt).
    - **Negative Prompt Padrão** (em inglês).
-   - **Variações do Master Style** por modelo: Flux.1 Pro, Ideogram e Recraft V3.
+   - **Variações do Master Style** por modelo: Nano Banana Pro (cenas e texto renderizado) e Recraft V3 SVG (vetor).
 3. Atualize o `README.md` (Questionário ✅, Brand DNA ✅) e rode:
    `git add . && git commit -m "feat(dna): lock brand visual identity and master style prompt" && git push origin main`
 4. Mostre um resumo visual do DNA e o menu:

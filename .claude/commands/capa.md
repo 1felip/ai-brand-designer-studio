@@ -26,7 +26,11 @@ Crie `prompts/capas/capa-XXX-<slug>.md` com:
 - **3 prompts técnicos em inglês** com espaço negativo calculado (ex.: `subject positioned on right third, empty clean area on left 45% for headline`), modelo-alvo, aspect ratio e Negative Prompt Padrão.
 
 ## 4. Gerar o asset (opcional)
-Se o Replicate MCP estiver ativo, gere e salve em `assets/capas/capa-XXX-<slug>-v1.png`.
+Siga o roteamento de modelos do `CLAUDE.md`. Com `GEMINI_API_KEY` configurada:
+- Rascunhos com `scripts/gerar-imagem.ps1 -Modelo flash -Tamanho 1K`. Final aprovado com `-Modelo pro -Tamanho 2K` em `assets/capas/capa-XXX-<slug>-v1.png`.
+- **Banner `4:1`** (ou outra proporção extrema): use `-Modelo flash` também no final, porque o Pro não aceita essas proporções.
+- **Capa de um corte:** se houver o frame ou o link do vídeo, passe o frame em `-Referencias` para a capa usar a cena real.
+Sem chave ou sem crédito, avise que só os prompts foram entregues.
 
 ## 5. Sincronizar
 Atualize o índice "Capas" no `README.md` e rode:

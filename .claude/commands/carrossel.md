@@ -26,7 +26,10 @@ Crie `prompts/carrosseis/carrossel-XXX-<slug>.md` com:
 - **Legenda do post** com CTA e hashtags sugeridas.
 
 ## 4. Gerar os assets (opcional)
-Se o Replicate MCP estiver ativo, gere os slides e salve em `assets/posts/carrossel-XXX-<slug>-s<NN>.png`.
+Siga o roteamento de modelos do `CLAUDE.md`. Com `GEMINI_API_KEY` configurada:
+1. Gere o **slide 1** com `scripts/gerar-imagem.ps1 -Modelo pro -Proporcao 4:5 -Tamanho 2K` e peça aprovação.
+2. Gere os demais slides passando o slide 1 aprovado em `-Referencias` ("same visual system as the reference image, slide N of T"). Salve em `assets/posts/carrossel-XXX-<slug>-s<NN>.png`.
+Sem chave ou sem crédito, avise que só os prompts foram entregues.
 
 ## 5. Sincronizar
 Atualize o índice "Carrosséis" no `README.md` e rode:
