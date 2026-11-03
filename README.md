@@ -24,6 +24,7 @@ Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e 
 | Diagnóstico de referências | ✅ Concluído | [brand/diagnostico-referencias.md](brand/diagnostico-referencias.md) |
 | Questionário de decisões | ✅ `1A, 2B, 3A, 4C, 5C` | [brand/questionario-decisoes.md](brand/questionario-decisoes.md) |
 | Brand DNA | ✅ Travado | [brand/brand-dna.md](brand/brand-dna.md) |
+| Logo | 🟡 3 conceitos prontos, aguardando escolha | [prompts/logos/logo-001-pin-dpad.md](prompts/logos/logo-001-pin-dpad.md) |
 
 **DNA em uma linha:** Neon Arcade Noturno · `#0A1628` / `#5EE6A8` / `#FFD23F` · Anton + Rubik + Press Start 2P · frame em tela cheia com moldura menta
 
@@ -33,7 +34,9 @@ Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e 
 _Nenhum ainda._
 
 ### Logos
-_Nenhum ainda._
+| # | Criação | Conceitos | Assets |
+| :--- | :--- | :--- | :--- |
+| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | ⏳ Pendente (Replicate sem crédito) |
 
 ### Capas
 _Nenhuma ainda._
