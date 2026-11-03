@@ -2,6 +2,8 @@
 
 Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e versionado no GitHub.
 
+**Marca atual:** Checkpoint Pop ([@checkpoint_pop](https://www.instagram.com/checkpoint_pop/)): cortes de games, filmes e séries
+
 > Arquitetura completa do agente: [docs/arquitetura-agente.md](docs/arquitetura-agente.md)
 
 ## Comandos disponíveis
@@ -19,7 +21,7 @@ Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e 
 
 | Etapa | Status | Arquivo |
 | :--- | :--- | :--- |
-| Diagnóstico de referências | ⏳ Pendente | `brand/diagnostico-referencias.md` |
+| Diagnóstico de referências | ✅ Concluído | [brand/diagnostico-referencias.md](brand/diagnostico-referencias.md) |
 | Questionário de decisões | ⏳ Pendente | `brand/questionario-decisoes.md` |
 | Brand DNA | ⏳ Pendente | `brand/brand-dna.md` |
 
