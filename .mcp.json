@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "cmd",
+      "args": ["/c", "npx", "@playwright/mcp@latest", "--output-dir", "assets/referencias"]
+    },
+    "firecrawl": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY:-}"
+      }
+    },
+    "github": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN:-}"
+      }
+    },
+    "replicate": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "mcp-server-replicate"],
+      "env": {
+        "REPLICATE_API_TOKEN": "${REPLICATE_API_TOKEN:-}"
+      }
+    }
+  }
+}
