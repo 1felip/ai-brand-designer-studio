@@ -135,4 +135,23 @@ photorealistic, 3D render, gradients, drop shadow, texture, mockup, busy backgro
 
 **Correção para a próxima rodada (qualquer conceito):** dar ao d-pad marcas inconfundíveis de controle, como **setinhas triangulares na ponta de cada braço** e/ou um **disco rebaixado no centro**, para afastar a leitura de cruz médica.
 
+### Rodada 2: C1 refinado (Nano Banana Pro · 2K · rascunho do C1 como referência)
+
+Escolha do usuário: **C1 Pin Clássico**, com a correção do d-pad.
+
+| Variação | Arquivo | Leitura |
+| :--- | :--- | :--- |
+| V1 | [logo-001-pin-dpad-c1-v1.png](../../assets/logos/logo-001-pin-dpad-c1-v1.png) | Poço circular + d-pad menta com setas + disco amarelo |
+| **V2 (recomendada)** | [logo-001-pin-dpad-c1-v2.png](../../assets/logos/logo-001-pin-dpad-c1-v2.png) | Mesma estrutura, setas maiores e mais nítidas, ponta mais longa |
+| Validação V2 | [logo-001-pin-dpad-c1-v2-validacao.png](../../assets/logos/logo-001-pin-dpad-c1-v2-validacao.png) | Escuro × claro em 110 / 48 / 32 / 16 px |
+
+**Resultado do checklist (V2):**
+- [x] Não lê mais como cruz médica: as setas e o poço circular dizem "controle"
+- [x] Funciona em escuro (menta) e em claro (azul-noite), com o amarelo ≤ 10%
+- [x] 110px (avatar) e 48px: perfeito · 32px: bom
+- [ ] **16px:** a silhueta do pin + o anel + o ponto amarelo continuam legíveis, mas as setas somem → criar uma **versão favicon simplificada** (pin + anel + ponto, sem d-pad)
+- [ ] SVG vetorial final
+
+**Prompt usado (V2):** ver o histórico do commit; a base é o prompt C1 + "circular navy hole like a controller button well, chunky d-pad with engraved triangle arrows, NOT a medical or plus sign".
+
 > 2026-11-03: a primeira tentativa no Replicate (`recraft-ai/recraft-v3-svg`) retornou **402 Payment Required**, ou seja, a conta está sem crédito. O SVG final do conceito escolhido sai por `scripts/gerar-vetor.ps1` assim que houver saldo.
