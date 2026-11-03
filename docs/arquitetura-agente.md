@@ -11,7 +11,7 @@ Antes ou durante a inicialização, o Claude Code utilizará os seguintes servid
 | **Análise Visual & CSS de Páginas** | **Playwright MCP** (`@playwright/mcp`) | `claude mcp add playwright npx @playwright/mcp@latest` | Abre o site/página da marca e concorrentes, tira *screenshots* reais para análise visual (Claude Vision) e extrai cores `#HEX` e fontes do CSS |
 | **Scraping de Conteúdo e Copy** | **Firecrawl MCP** (`firecrawl-mcp`) | `claude mcp add firecrawl -e FIRECRAWL_API_KEY=sua_key -- npx -y firecrawl-mcp` | Extrai posicionamento, textos, estrutura de landing pages e URLs de imagens de referência |
 | **Versionamento & Repositório** | **GitHub MCP** + **GitHub CLI (`gh`)** | `claude mcp add github -- npx -y @modelcontextprotocol/server-github` | Cria o repositório remoto, gerencia branches/commits e sincroniza todo o progresso automaticamente |
-| **Geração de Logos, Vetores e Posts** | **Replicate MCP** ou **Fal.ai MCP** | `claude mcp add replicate -e REPLICATE_API_TOKEN=sua_key -- npx -y mcp-server-replicate` | Executa **Recraft V3** (logos em `.SVG` vetorial), **Ideogram v2/v3** (tipografia precisa) e **Flux.1 Pro** (posts fotorrealistas) salvando na pasta do projeto |
+| **Geração de Logos, Vetores e Posts** | **Replicate MCP** ou **Fal.ai MCP** | `claude mcp add replicate -e REPLICATE_API_TOKEN=sua_key -- npx -y replicate-mcp` | Executa **Recraft V3** (logos em `.SVG` vetorial), **Ideogram v2/v3** (tipografia precisa) e **Flux.1 Pro** (posts fotorrealistas) salvando na pasta do projeto |
 | **Integração com Design System** | **Figma MCP** (`figma-developer-mcp`) | `claude mcp add figma -e FIGMA_API_KEY=sua_key -- npx -y figma-developer-mcp` | Lê tokens, grids e frames do Figma (opcional, caso a marca já possua layouts no Figma) |
 
 ## 2. Prompt de Inicialização (Cole este bloco no Claude Code para criar tudo sozinho)
@@ -37,7 +37,7 @@ Crie na raiz do projeto um arquivo `.mcp.json` pré-configurado com os melhores 
 - `playwright` (`npx @playwright/mcp@latest`) para abrir URLs da marca e referências, capturar screenshots de tela inteira em `assets/referencias/` e inspecionar paletas HEX e fontes direto do DOM/CSS.
 - `firecrawl` (`npx -y firecrawl-mcp`) para extração limpa de copy e estrutura de páginas de referência.
 - `github` (`npx -y @modelcontextprotocol/server-github`) para operações de repositório.
-- `replicate` (`npx -y mcp-server-replicate`) para geração direta de imagens e vetores (Recraft V3 SVG, Ideogram, Flux.1 Pro) caso eu configure a chave de API.
+- `replicate` (`npx -y replicate-mcp`) para geração direta de imagens e vetores (Recraft V3 SVG, Ideogram, Flux.1 Pro) caso eu configure a chave de API.
 
 ### PASSO 3: Criação do `CLAUDE.md` (Cérebro do Agente + Regra de GitHub Auto-Sync)
 Crie o arquivo `CLAUDE.md` na raiz do projeto contendo as seguintes regras permanentes:
