@@ -46,7 +46,7 @@ _Nenhum ainda._
 ### Logos
 | # | Criação | Conceitos | Assets |
 | :--- | :--- | :--- | :--- |
-| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | ⏳ Pendente (sem crédito no Replicate / sem chave do Gemini) |
+| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | 🟡 Rascunhos PNG: [C1](assets/logos/logo-001-pin-dpad-c1-rascunho.png) · [C2](assets/logos/logo-001-pin-dpad-c2-rascunho.png) · [C3](assets/logos/logo-001-pin-dpad-c3-rascunho.png) · SVG pendente |
 
 ### Capas
 _Nenhuma ainda._

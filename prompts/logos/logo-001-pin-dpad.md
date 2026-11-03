@@ -119,10 +119,20 @@ photorealistic, 3D render, gradients, drop shadow, texture, mockup, busy backgro
 
 ## Assets gerados
 
-| Conceito | Arquivo | Status |
+| Conceito | Rascunho PNG (Nano Banana 2.1 · 1K) | SVG final (Recraft V3) |
 | :--- | :--- | :--- |
-| C1 Pin Clássico | `assets/logos/logo-001-pin-dpad-c1.svg` | ⏳ Pendente |
-| C2 Cruz-Pin | `assets/logos/logo-001-pin-dpad-c2.svg` | ⏳ Pendente |
-| C3 Pixel Pin | `assets/logos/logo-001-pin-dpad-c3.svg` | ⏳ Pendente |
+| C1 Pin Clássico | [logo-001-pin-dpad-c1-rascunho.png](../../assets/logos/logo-001-pin-dpad-c1-rascunho.png) | ⏳ Aguardando escolha |
+| C2 Cruz-Pin | [logo-001-pin-dpad-c2-rascunho.png](../../assets/logos/logo-001-pin-dpad-c2-rascunho.png) | ⏳ Aguardando escolha |
+| C3 Pixel Pin | [logo-001-pin-dpad-c3-rascunho.png](../../assets/logos/logo-001-pin-dpad-c3-rascunho.png) | ⏳ Aguardando escolha |
 
-> 2026-11-03: a primeira tentativa no Replicate (`recraft-ai/recraft-v3-svg`) retornou **402 Payment Required**, ou seja, a conta está sem crédito. Rodar com `scripts/gerar-vetor.ps1` (SVG) assim que houver saldo no Replicate, e `scripts/gerar-imagem.ps1 -Modelo pro` (lockups) quando a `GEMINI_API_KEY` estiver configurada.
+### Análise dos rascunhos (2026-11-03)
+
+| | Acertos | Problemas |
+| :--- | :--- | :--- |
+| **C1** | Paleta exata, silhueta limpa, lê bem em tamanho pequeno | **A cruz dentro do pin lê como "farmácia/hospital no mapa"** |
+| **C2** | Forma única, ponto amarelo forte | A leitura de pin é fraca (parece um "+" com seta ou uma espada); também lembra cruz médica |
+| **C3** | O mais "game" dos três: o pixel deixa claro que é d-pad e não cruz médica; combina com os selos em Press Start 2P | A ponta de 1 pixel some em 16px; o contorno precisa de grade mais grossa |
+
+**Correção para a próxima rodada (qualquer conceito):** dar ao d-pad marcas inconfundíveis de controle, como **setinhas triangulares na ponta de cada braço** e/ou um **disco rebaixado no centro**, para afastar a leitura de cruz médica.
+
+> 2026-11-03: a primeira tentativa no Replicate (`recraft-ai/recraft-v3-svg`) retornou **402 Payment Required**, ou seja, a conta está sem crédito. O SVG final do conceito escolhido sai por `scripts/gerar-vetor.ps1` assim que houver saldo.
