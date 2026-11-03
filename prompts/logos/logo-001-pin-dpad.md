@@ -142,16 +142,40 @@ Escolha do usuário: **C1 Pin Clássico**, com a correção do d-pad.
 | Variação | Arquivo | Leitura |
 | :--- | :--- | :--- |
 | V1 | [logo-001-pin-dpad-c1-v1.png](../../assets/logos/logo-001-pin-dpad-c1-v1.png) | Poço circular + d-pad menta com setas + disco amarelo |
-| **V2 (recomendada)** | [logo-001-pin-dpad-c1-v2.png](../../assets/logos/logo-001-pin-dpad-c1-v2.png) | Mesma estrutura, setas maiores e mais nítidas, ponta mais longa |
+| **V2 ✅ aprovada** | [logo-001-pin-dpad-c1-v2.png](../../assets/logos/logo-001-pin-dpad-c1-v2.png) | Mesma estrutura, setas maiores e mais nítidas, ponta mais longa |
 | Validação V2 | [logo-001-pin-dpad-c1-v2-validacao.png](../../assets/logos/logo-001-pin-dpad-c1-v2-validacao.png) | Escuro × claro em 110 / 48 / 32 / 16 px |
 
 **Resultado do checklist (V2):**
 - [x] Não lê mais como cruz médica: as setas e o poço circular dizem "controle"
 - [x] Funciona em escuro (menta) e em claro (azul-noite), com o amarelo ≤ 10%
 - [x] 110px (avatar) e 48px: perfeito · 32px: bom
-- [ ] **16px:** a silhueta do pin + o anel + o ponto amarelo continuam legíveis, mas as setas somem → criar uma **versão favicon simplificada** (pin + anel + ponto, sem d-pad)
-- [ ] SVG vetorial final
+- [x] **16px:** as setas somem → resolvido com a **versão favicon** (pin + anel + ponto amarelo ampliado, sem d-pad)
+- [x] SVG vetorial final (abaixo)
 
-**Prompt usado (V2):** ver o histórico do commit; a base é o prompt C1 + "circular navy hole like a controller button well, chunky d-pad with engraved triangle arrows, NOT a medical or plus sign".
+**Prompt usado (V2):** a base é o prompt C1 + "circular navy hole like a controller button well, chunky d-pad with engraved triangle arrows, NOT a medical or plus sign".
 
-> 2026-11-03: a primeira tentativa no Replicate (`recraft-ai/recraft-v3-svg`) retornou **402 Payment Required**, ou seja, a conta está sem crédito. O SVG final do conceito escolhido sai por `scripts/gerar-vetor.ps1` assim que houver saldo.
+---
+
+## Versões oficiais (SVG)
+
+**Status: ✅ LOGO TRAVADO em 2026-11-03.**
+
+Processo: V2 aprovada (PNG 2K) → quantizada para `#0A1628 / #5EE6A8 / #FFD23F` → `recraft-ai/recraft-vectorize` ([bruto](../../assets/logos/logo-001-pin-dpad-c1-v2-vetorizado.svg): 9 caminhos, 4,8 KB) → camadas recoloridas com os HEX exatos do DNA. A área de proteção já está embutida no `viewBox` (= 1 braço do d-pad em cada lado).
+
+| Versão | Arquivo | Uso |
+| :--- | :--- | :--- |
+| **Principal escuro** | [principal-escuro.svg](../../assets/logos/logo-001-pin-dpad-principal-escuro.svg) | Avatar do Instagram/TikTok/YouTube, fundos `#0A1628` |
+| Principal sem fundo | [principal-sem-fundo.svg](../../assets/logos/logo-001-pin-dpad-principal-sem-fundo.svg) | Sobre o template e as faixas escuras |
+| Principal claro | [principal-claro.svg](../../assets/logos/logo-001-pin-dpad-principal-claro.svg) | Fundos claros `#F2F7F5` (símbolo azul-noite) |
+| Mono escuro | [mono-escuro.svg](../../assets/logos/logo-001-pin-dpad-mono-escuro.svg) | Impressão em 1 cor sobre escuro |
+| Mono claro | [mono-claro.svg](../../assets/logos/logo-001-pin-dpad-mono-claro.svg) | Impressão em 1 cor sobre claro, carimbo |
+| **Marca d'água** | [marca-dagua.svg](../../assets/logos/logo-001-pin-dpad-marca-dagua.svg) | Canto dos cortes (branco-gelo a 70%) |
+| Favicon escuro | [favicon-escuro.svg](../../assets/logos/logo-001-pin-dpad-favicon-escuro.svg) | ≤ 32px: favicon, ícone de aba |
+| Favicon claro | [favicon-claro.svg](../../assets/logos/logo-001-pin-dpad-favicon-claro.svg) | ≤ 32px sobre claro |
+
+**Prancha de validação (renderizada no navegador, 160 / 64 / 32 / 16 px):** [logo-001-pin-dpad-final-prancha.png](../../assets/logos/logo-001-pin-dpad-final-prancha.png)
+
+**Regras de uso:**
+- Abaixo de 32px, use **sempre** o favicon.
+- Nunca recolorir fora dessas 8 versões, aplicar sombra/brilho no símbolo, girar ou distorcer.
+- Tamanho mínimo da versão completa: 32px digital / 10mm impresso.

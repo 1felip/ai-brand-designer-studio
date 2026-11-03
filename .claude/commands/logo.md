@@ -29,7 +29,9 @@ Crie `prompts/logos/logo-XXX-<slug>.md` com:
 
 ## 4. Gerar o asset (opcional)
 Siga o roteamento de modelos do `CLAUDE.md`:
-- **Símbolo em vetor (principal):** `scripts/gerar-vetor.ps1` (Recraft V3 SVG) → `assets/logos/logo-XXX-<slug>-c<N>.svg`.
+- **Exploração:** rascunhos PNG dos 3 conceitos com `scripts/gerar-imagem.ps1 -Modelo flash -Tamanho 1K`. Refino do escolhido com `-Modelo pro`, passando o rascunho em `-Referencias`.
+- **Validação:** prancha escuro × claro em 110 / 48 / 32 / 16 px antes de vetorizar.
+- **Vetor final:** `scripts/gerar-vetor.ps1 -Vetorizar <png aprovado> -Paleta "<HEX do DNA>"` → `assets/logos/logo-XXX-<slug>-c<N>-vetorizado.svg`. Depois gere as versões oficiais (principal escuro/claro/sem fundo, mono escuro/claro, marca d'água, favicon) recolorindo as camadas com os HEX exatos.
 - **Lockup com nome / mockup (opcional):** `scripts/gerar-imagem.ps1 -Modelo pro -Proporcao 1:1` → `assets/logos/logo-XXX-<slug>-c<N>-lockup.png`.
 Sem a chave do modelo ou sem crédito, avise que só os prompts foram entregues.
 

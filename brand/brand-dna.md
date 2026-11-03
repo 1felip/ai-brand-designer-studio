@@ -64,7 +64,7 @@
 - Tratamento de cor dos frames (**pop studio**): saturação +15–25%, contraste alto, pretos profundos, realces vibrantes. Nada de "cinema dessaturado".
 - **Assinaturas fixas da marca:**
   1. **Moldura menta** de 4–6px com cantos arredondados (24px) ao redor do frame.
-  2. **Pin Checkpoint** (do avatar) no canto, como marca d'água.
+  2. **Pin Checkpoint** no canto, como marca d'água. Arquivo oficial: [`logo-001-pin-dpad-marca-dagua.svg`](../assets/logos/logo-001-pin-dpad-marca-dagua.svg) (todas as versões em [logo-001](../prompts/logos/logo-001-pin-dpad.md#versões-oficiais-svg)).
   3. **Selo de categoria** em Press Start 2P: `GAME` · `FILME` · `SÉRIE`.
   4. **Numeração de checkpoint**: `CHECKPOINT #001`, que transforma o feed em coleção.
   5. **Grade HUD** sutil (teal 20%) só nas faixas de fundo, nunca sobre o frame.
@@ -165,3 +165,4 @@ red color scheme, purple and pink RGB gamer aesthetic, rainbow gradients, glitch
 | :--- | :--- | :--- |
 | 2026-11-03 | Criação do DNA (`1A, 2B, 3A, 4C, 5C`) | Onboarding inicial |
 | 2026-11-03 | Variações por modelo: Flux.1 Pro + Ideogram → **Nano Banana Pro**; Recraft V3 SVG mantido para vetor | Integração híbrida focada na melhor qualidade por peça (paleta, fontes e estilo não mudaram) |
+| 2026-11-03 | **Logo oficial travado:** Pin D-Pad C1-V2 (pin menta + poço circular + d-pad com setas + ponto amarelo), 8 versões SVG | `/logo` 001 aprovado pelo usuário |

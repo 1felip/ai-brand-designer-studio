@@ -47,7 +47,7 @@ Ao concluir cada etapa (diagnóstico, questionário, DNA, cada `/post`, `/logo`,
 | Carrossel (série de slides) | **Nano Banana Pro** · 2K, **com o slide 1 aprovado como referência** dos demais | Nano Banana 2.1 | Consistência entre slides via imagem de referência (até 14) |
 | Capa a partir de um corte (vídeo do YouTube) | **Nano Banana 2.1** (video-to-image) | — | Único que lê o vídeo como referência |
 | Proporções extremas (`4:1`, `1:4`, `8:1`) | **Nano Banana 2.1** | — | O Pro não suporta essas proporções |
-| **Logo final, ícones, pin, selos (vetor)** | **Recraft V3 SVG** `recraft-ai/recraft-v3-svg` (Replicate) | Nano Banana 2.1 para explorar a forma em PNG | Único que entrega SVG de verdade |
+| **Logo final, ícones, pin, selos (vetor)** | **Recraft Vectorize** `recraft-ai/recraft-vectorize` sobre o PNG aprovado (`gerar-vetor.ps1 -Vetorizar -Paleta`) · alternativa: Recraft V3 SVG por prompt | Nano Banana 2.1 (rascunhos) → Nano Banana Pro (refino) em PNG | Vetorizar o PNG aprovado preserva exatamente a forma escolhida; a quantização garante os HEX do DNA |
 | Lockup do logo com nome, mockups de aplicação | **Nano Banana Pro** | — | Texto da marca renderizado com precisão |
 
 Regras de uso:

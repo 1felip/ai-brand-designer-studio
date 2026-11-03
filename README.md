@@ -23,7 +23,7 @@ Agente de IA **Designer & Estrategista de Branding** operado pelo Claude Code e 
 | :--- | :--- | :--- | :--- |
 | Posts, capas, carrosséis, lockups (final) | Nano Banana Pro `gemini-3-pro-image` | [scripts/gerar-imagem.ps1](scripts/gerar-imagem.ps1) `-Modelo pro` | `GEMINI_API_KEY` |
 | Rascunhos, banners `4:1`, capa a partir de vídeo | Nano Banana 2.1 `gemini-nano-banana-2.1` | [scripts/gerar-imagem.ps1](scripts/gerar-imagem.ps1) `-Modelo flash` | `GEMINI_API_KEY` |
-| Logo, ícones, selos (SVG) | Recraft V3 SVG (Replicate) | [scripts/gerar-vetor.ps1](scripts/gerar-vetor.ps1) | `REPLICATE_API_TOKEN` |
+| Logo, ícones, selos (SVG) | Recraft Vectorize sobre PNG aprovado (Replicate) | [scripts/gerar-vetor.ps1](scripts/gerar-vetor.ps1) | `REPLICATE_API_TOKEN` |
 
 Tabela completa de roteamento: [CLAUDE.md](CLAUDE.md#roteamento-de-modelos-melhor-qualidade-por-peça). As chaves ficam só em variáveis de ambiente, nunca no repositório.
 
@@ -34,7 +34,7 @@ Tabela completa de roteamento: [CLAUDE.md](CLAUDE.md#roteamento-de-modelos-melho
 | Diagnóstico de referências | ✅ Concluído | [brand/diagnostico-referencias.md](brand/diagnostico-referencias.md) |
 | Questionário de decisões | ✅ `1A, 2B, 3A, 4C, 5C` | [brand/questionario-decisoes.md](brand/questionario-decisoes.md) |
 | Brand DNA | ✅ Travado | [brand/brand-dna.md](brand/brand-dna.md) |
-| Logo | 🟡 C1 escolhido, V2 em aprovação | [prompts/logos/logo-001-pin-dpad.md](prompts/logos/logo-001-pin-dpad.md) |
+| Logo | ✅ Travado: Pin D-Pad (8 versões SVG) | [prompts/logos/logo-001-pin-dpad.md](prompts/logos/logo-001-pin-dpad.md) |
 
 **DNA em uma linha:** Neon Arcade Noturno · `#0A1628` / `#5EE6A8` / `#FFD23F` · Anton + Rubik + Press Start 2P · frame em tela cheia com moldura menta
 
@@ -46,7 +46,7 @@ _Nenhum ainda._
 ### Logos
 | # | Criação | Conceitos | Assets |
 | :--- | :--- | :--- | :--- |
-| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | 🟡 **C1 escolhido** · [V2 recomendada](assets/logos/logo-001-pin-dpad-c1-v2.png) · [validação](assets/logos/logo-001-pin-dpad-c1-v2-validacao.png) · SVG pendente |
+| 001 | [Pin D-Pad: ícone minimalista](prompts/logos/logo-001-pin-dpad.md) | C1 Pin Clássico · C2 Cruz-Pin · C3 Pixel Pin | ✅ **C1-V2 travado** · [principal](assets/logos/logo-001-pin-dpad-principal-escuro.svg) · [marca d'água](assets/logos/logo-001-pin-dpad-marca-dagua.svg) · [favicon](assets/logos/logo-001-pin-dpad-favicon-escuro.svg) · [prancha](assets/logos/logo-001-pin-dpad-final-prancha.png) · [todas as versões](prompts/logos/logo-001-pin-dpad.md#versões-oficiais-svg) |
 
 ### Capas
 _Nenhuma ainda._
