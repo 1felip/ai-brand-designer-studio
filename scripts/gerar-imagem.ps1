@@ -71,6 +71,10 @@ try {
     -Body ([Text.Encoding]::UTF8.GetBytes($body)) -TimeoutSec 300
 } catch {
   $msg = $_.ErrorDetails.Message
+  if (-not $msg -and $_.Exception.Response) {
+    # PowerShell 5.1: o corpo do erro precisa ser lido do stream da resposta
+    try { $msg = (New-Object IO.StreamReader($_.Exception.Response.GetResponseStream())).ReadToEnd() } catch {}
+  }
   if (-not $msg) { $msg = $_.Exception.Message }
   throw "Falha na Gemini API ($modelId): $msg"
 }

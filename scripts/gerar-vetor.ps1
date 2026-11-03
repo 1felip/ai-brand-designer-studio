@@ -40,6 +40,9 @@ try {
   }
 } catch {
   $msg = $_.ErrorDetails.Message
+  if (-not $msg -and $_.Exception.Response) {
+    try { $msg = (New-Object IO.StreamReader($_.Exception.Response.GetResponseStream())).ReadToEnd() } catch {}
+  }
   if (-not $msg) { $msg = $_.Exception.Message }
   throw "Falha no Replicate (recraft-v3-svg): $msg"
 }

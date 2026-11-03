@@ -6,6 +6,14 @@ token.md
 token*.txt
 *token*.md
 secrets.*
+*[Aa][Pp][Ii][Kk][Ee][Yy]*
+*[Aa][Pp][Ii]_[Kk][Ee][Yy]*
+*[Aa][Pp][Ii]-[Kk][Ee][Yy]*
+*credential*
+*senha*
+
+# Arquivos de teste dos scripts de geração
+assets/**/_teste*
 
 # Configurações locais do Claude Code
 .claude/settings.local.json
